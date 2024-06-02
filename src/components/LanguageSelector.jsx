@@ -57,7 +57,7 @@ export const LanguageSelector = ({
         setIsLoading(false);
       }
     })();
-  }, []);
+  }, [setLanguagesList, setLanguage, setLanguageVersion, setValue, toast]);
 
   return (
     <Box ml={2} mb={4}>
