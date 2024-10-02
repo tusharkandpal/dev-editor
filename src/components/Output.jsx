@@ -36,7 +36,7 @@ export const Output = ({ editorRef, language, languageVersion }) => {
   };
 
   return (
-    <Box w="50%">
+    <Box>
       <Text mb={2} fontSize="lg">
         Output
       </Text>
