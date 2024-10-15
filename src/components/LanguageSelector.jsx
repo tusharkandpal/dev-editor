@@ -41,10 +41,14 @@ export const LanguageSelector = ({
             SUPPORTED_LANGUAGES.includes(lang.language) &&
             lang.runtime !== "deno"
         );
+        const defaultLang = filterSupportedLangs.find(
+          (lang) => lang.language.toLowerCase() === "javascript"
+        );
+
         setLanguagesList(filterSupportedLangs);
-        setLanguage(filterSupportedLangs[0].language);
-        setLanguageVersion(filterSupportedLangs[0].version);
-        setValue(CODE_SNIPPETS[filterSupportedLangs[0].language]);
+        setLanguage(defaultLang.language);
+        setLanguageVersion(defaultLang.version);
+        setValue(CODE_SNIPPETS[defaultLang.language]);
       } catch (error) {
         console.error(error);
         toast({
